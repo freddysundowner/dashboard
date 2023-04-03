@@ -6,39 +6,39 @@ class GridDashboard extends StatelessWidget {
   Items item1 = new Items(
       title: "Investment",
       subtitle: "All money invested by the partner",
-      event: "\$ 20.00",
+      event: "\$20.00",
       color: Color(0XFF97d1c8));
 
   Items item2 = new Items(
       title: "Expenses",
       subtitle: "All paid expenses",
-      event: "\$ 70.00",
+      event: "\$70.00",
       color: Color(0XFF212e68));
   Items item3 = new Items(
       title: "Income",
       subtitle: "All received and recorded income",
-      event: "\$ 120.00",
+      event: "\$120.00",
       color: Colors.amber.withOpacity(0.6));
   Items item4 = new Items(
       title: "Outstanding payables",
-      subtitle: "All unpaid payables",
-      event: "\$ 300.00",
+      subtitle:"All unpaid payables",
+      event: "\$300.00",
       color: Colors.black.withOpacity(0.6));
   Items item5 = new Items(
       title: "Outstanding liabilities",
       subtitle: "All client billed account receivable",
-      event: "\$ 100.00",
+      event: "\$100.00",
       color: Colors.grey.withOpacity(0.6));
   Items item6 = new Items(
       title: " Current account balance",
       subtitle: "Outstanding estimated account receivable",
-      event: "\$ 500.00",
+      event: "\$500.00",
       color: Colors.purpleAccent.withOpacity(0.6));
 
   Items item7 = new Items(
       title: "Current partners available payout",
-      subtitle: "Maximum amount the partner can currently request",
-      event: "\$ 400.00",
+      subtitle:"Maximum amount the partner can currently request",
+      event: "\$400.00",
       color: Color(0XFFf6e6a8));
 
   @override

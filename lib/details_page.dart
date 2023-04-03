@@ -76,7 +76,7 @@ class DetailsPage extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                "\$ 200.00",
+                                "\$200.00",
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.w500),
                               ),
