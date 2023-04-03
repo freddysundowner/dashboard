@@ -1,4 +1,6 @@
+import 'package:dashboard/details_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class GridDashboard extends StatelessWidget {
   Items item1 = new Items(
@@ -70,49 +72,54 @@ class GridDashboard extends StatelessWidget {
         ),
       ),
       body: Container(
-          margin: EdgeInsets.only(top: 10,left: 20,right: 20),
+          margin: EdgeInsets.only(top: 10, left: 20, right: 20),
           child: ListView.builder(
               itemCount: myList.length,
               shrinkWrap: true,
               itemBuilder: (context, index) {
-                return Container(
-                  margin: EdgeInsets.only(bottom: 20),
-                  padding: EdgeInsets.symmetric(vertical: 20),
-                  decoration: BoxDecoration(
-                    color: myList[index].color,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        myList[index].title!,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
+                return InkWell(
+                  onTap: () {
+                    Get.to(() => DetailsPage(title:"${myList[index].title}".capitalize));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(bottom: 20),
+                    padding: EdgeInsets.symmetric(vertical: 20),
+                    decoration: BoxDecoration(
+                      color: myList[index].color,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          myList[index].title!,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        myList[index].subtitle!,
-                        style: TextStyle(
-                          color: Colors.white60,
-                          fontSize: 13,
-                          fontWeight: FontWeight.w600,
+                        SizedBox(height: 8),
+                        Text(
+                          myList[index].subtitle!,
+                          style: TextStyle(
+                            color: Colors.white60,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 14),
-                      Text(
-                        myList[index].event!,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
+                        SizedBox(height: 14),
+                        Text(
+                          myList[index].event!,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 );
               })),
